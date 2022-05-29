@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;    
+}
+
+/* Contenedor principal padre */  
+
+.contenedorGeneral{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas: 
+    "header header header header header header"
+    "asideBar main main main main main"
+    "footer footer footer footer footer footer";
+}
+
+/* Características header */  
+
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    background-color: #7aa802; 
+}
+
+/* Características asideBar */  
+
+.asideBar{
+    grid-area: asideBar;
+    display: flex;
+    background-color: #e4b600;
+}
+
+.categorias{ 
+    flex-direction: column;
+}
+
+.categorias h2{
+    padding: 20px 10px 5px 10px;
+}
+
+.barraBusqueda{
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px 0px 10px;
+    min-width: max-content;
+}
+
+.barraBusqueda p{
+    color: grey;
+}
+
+/* Características main */  
+
+.main{
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 
+    "tarjeta tarjeta tarjeta"
+    "tarjeta tarjeta tarjeta";
+    background-color: #e6ebe0;
+    justify-items: center;
+    align-items: center;
+    gap: 60px 30px;
+    padding: 10px;
+}
+
+/* Características para las tarjetas */  
+
+.tarjeta{
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 323px;
+}
+
+.tarjeta img{
+    width: 323px;
+    justify-content: center;
+}
+
+.tarjeta h2{
+text-align: center;
+}
+
+.tarjeta p{
+    text-align: center;
+}
+
+.botonFooter{
+    display: flex;
+    background-color: #f78b2d;
+    justify-content: center;
+}
+
+/* Características para footer */  
+
+footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    background-color: #7aa802;
+}
